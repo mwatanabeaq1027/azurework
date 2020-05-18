@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+    <f:view>
+        <f:metadata>
+            <f:viewAction action="#{resultBean.find()}"/>
+        </f:metadata>
+        <h:head>
+            <meta http-equiv="Content-Type" content="text/html; charset=Windows-31J" />
+            <title>認証結果</title>
+        </h:head>
+        <h:body>
+            <h:form id="loginForm">
+                <div id="userIdRow">
+                    <span id="userIdLabel">ユーザID</span>
+                    <span id="userIdInput">
+                        <h:outputText id="userId" value="#{helloBean.userId}" label="ユーザID" />
+                    </span>
+                </div>
+                <div id="passwordRow">
+                    <span id="passwordLabel">パスワード</span>
+                    <span id="passwordInput">
+                        <h:outputText id="password" value="#{helloBean.password}"  label="パスワード" />
+                    </span>
+                </div>
+                <div id="dbResultRow">
+                    <span id="dbResultLabel">データ取得</span>
+                    <span id="dbInput">
+                        <h:outputText id="dbresult" value="#{helloBean.sqlresult}"  label="データ取得" />
+                    </span>
+                </div>
+                <div id="jpaResultRow">
+                    <span id="jpaResultLabel">JPAデータ取得</span>
+                    <span id="jpaInput">
+                        <h:outputText id="dbresult2" value="#{resultBean.Address1}"  label="データ取得" />
+                    </span>
+                </div>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
